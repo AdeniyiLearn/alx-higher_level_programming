@@ -9,4 +9,4 @@ def square_matrix_simple(matrix=[]):
     Returns: new list modified as squares of previous data).
     '''
     new_matrix = [[element**2 for element in block] for block in matrix]
-    return(new_matrix)
+    return new_matrix
