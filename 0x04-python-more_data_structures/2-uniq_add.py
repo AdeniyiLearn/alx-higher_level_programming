@@ -7,8 +7,8 @@ def uniq_add(my_list=[]):
     args:
         my_list: list
     """
-    if not my_list:
-        return []
+    if my_list is None:
+        return
     score = 0
     element = []
     for idx in my_list:
