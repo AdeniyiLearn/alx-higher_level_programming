@@ -30,7 +30,6 @@ class Rectangle:
         height : int
             height of each rectangle
         """
-
         self._width = width
         self._height = height
 
@@ -53,8 +52,7 @@ class Rectangle:
 
     @property
     def height(self):
-           """Returns the private attribute height"""
-
+        """Returns the private attribute height"""
         return self._height
 
     @height.setter
@@ -63,7 +61,6 @@ class Rectangle:
 
         @value: int, raise error if not
         """
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
