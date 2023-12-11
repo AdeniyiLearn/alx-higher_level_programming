@@ -5,7 +5,7 @@
 
 class Rectangle:
     """A class used to create and manage a rectangle.
-    
+
         Attributes
         ----------
         No special class attributes apart from the instantiated ones
@@ -79,7 +79,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
 
 
 if __name__ == "__main__":
