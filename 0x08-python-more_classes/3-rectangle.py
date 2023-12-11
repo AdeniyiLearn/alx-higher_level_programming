@@ -100,14 +100,14 @@ class Rectangle:
             return 0
         else:
             return (2 * (self.__height + self.__width))
- 
+
     def __str__(self):
         '''Returns # values for rectangle dimensions'''
         for i in range(self.__height):
             for u in range(self.__width):
                 print('#', end='')
             print()
-        return repr(Rectangle)
+        return str(Rectangle)
 
 
 if __name__ == "__main__":
