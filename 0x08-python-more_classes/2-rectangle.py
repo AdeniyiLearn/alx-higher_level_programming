@@ -18,7 +18,7 @@ class Rectangle:
 
         height(self, value)
             manipulates the rectangle heights
-        
+
         Public Methods
         -------------
         area(self)
