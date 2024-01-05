@@ -40,8 +40,8 @@ class Rectangle:
         height : int
             height of each rectangle
         """
-#        if width == 0 and height == 0:
-#            return ('')
+        if width == 0 or height == 0:
+            return ('')
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
