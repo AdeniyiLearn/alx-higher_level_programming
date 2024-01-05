@@ -40,6 +40,8 @@ class Rectangle:
         height : int
             height of each rectangle
         """
+        if width == 0 and height == 0:
+            return ('')
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
@@ -101,19 +103,17 @@ class Rectangle:
         else:
             return (2 * (self.__height + self.__width))
 
-'''the code below is printing one unneeded extra line
-    copy it out and to see what is wrong'''
+
     def __str__(self):
         '''Returns # values for rectangle representation'''
         result = ''
         for i in range(self.__height):
             for u in range(self.__width):
                 result += '#'
-            if result != '':
-                print(result)
-            result = ''
-            #print()
+            if i < (self.__height - 1):
+                result += '\n'
         return (result)
+
 
 
 if __name__ == "__main__":
