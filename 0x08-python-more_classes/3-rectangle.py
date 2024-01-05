@@ -103,7 +103,6 @@ class Rectangle:
         else:
             return (2 * (self.__height + self.__width))
 
-
     def __str__(self):
         '''Returns # values for rectangle representation'''
         result = ''
@@ -113,7 +112,6 @@ class Rectangle:
             if i < (self.__height - 1):
                 result += '\n'
         return (result)
-
 
 
 if __name__ == "__main__":
