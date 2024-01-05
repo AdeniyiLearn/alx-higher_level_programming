@@ -111,10 +111,11 @@ class Rectangle:
             if i < (self.__height - 1):
                 result += '\n'
         return (result)
-    
+
     def __repr__(self):
-        """"returns ..."""
-        return self(self.__width, self.__height)
+        """"returns strings represention of the intance"""
+        return f"Rectangle({self.__width}, {self.__height})"
+
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
