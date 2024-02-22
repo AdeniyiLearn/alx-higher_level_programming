@@ -29,11 +29,11 @@ def add_integer(a, b=98):
     if type(a) == float or type(b) == float:
         a = int(a)
         b = int(b)
-    if not a or type(a) != int:
-        raise TypeError("a must be an interger")
+    if type(a) != int:
+        raise TypeError("a must be an integer")
     elif type(b) != int:
         raise TypeError("b must be an integer")
-    return (a + b)
+    return (int(a + b))
 
 
 if __name__ == "__main__":
