@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Module contain the function matrix_divide
+
 matrix_divide : is a function that divides all the elements
 in a matrix by a given number --div--.
 
@@ -16,31 +17,43 @@ Usage Example:
 """
 
 def matrix_divided(matrix, div):
-"""function divides all elements of a matrix
-args:
-    matrix: a list of lists
-    div: integer divisor
-Return: a new matrix
-"""
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-    elif not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-    row_size = len(matrix[0])
-    new_matrix = []
-    for list in matrix:
-        if len(list) != row_size:
-            raise TypeError("Each row of the matrix must have the same size")
+        """Function that divides all elements of a matrix
 
-        newlist = []
-        for item in list:
-            if not isinstance(item, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            newlist.append(int(item/div))
-        new_matrix.append(newlist)
-    
-    return(new_matrix)
+        parameters:
+                matrix: a list of list of integers or floats
+                div: none Zero integer or float
+        
+        Returns: a new matrix
+        
+        """
+        list_copy = []
+        max_copy = []
+        index = 0
 
+        if not div:
+                raise TypeError ("matrix_divided() 1 required argument: 'div'")
+        if not isinstance(div, (int, float)):
+                raise TypeError ("div must be a number")
+        if div == 0:
+                raise ZeroDivisionError ("division by zero")
+
+        if isinstance(matrix, list):
+                for lst in matrix:
+                        if isinstance(lst, list):
+                                if index > 0 and len(matrix[index - 1]) != len(matrix[index]):
+                                        raise TypeError ("Each row of the matrix must have the same size")
+                                for items in lst:
+                                        if not isinstance(items, (int, float)):
+                                                raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
+                                        score = (items/div)
+                                        list_copy.append(round(score, 2))
+                        else:
+                                 raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
+                        max_copy.append(list_copy)
+                        list_copy = []
+
+                        index += 1
+        return (max_copy)
 
 
 
