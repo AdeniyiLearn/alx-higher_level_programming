@@ -13,4 +13,4 @@ def lookup(obj):
     Returnsi: a list object
     """
 
-    return help(obj)
+    return dir(obj)
