@@ -2,7 +2,9 @@
 
 """ This module creates a function called is_same_class(obj, a_class)
 
-function take an obj and check if it is an instance of a class"""
+function take an obj and check if it is an instance of a class
+    and more...
+"""
 
 
 def is_same_class(obj, a_class):
@@ -14,8 +16,8 @@ def is_same_class(obj, a_class):
         obj : a python object
         a_class : a python class object
 
-    Returnsi: True is the obj is an instance of a class and
-    False if not
+    Returns: True is the obj is an instance of a class and
+             False if not
     """
     if isinstance(obj, a_class) and type(obj) == a_class:
         return True
