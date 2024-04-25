@@ -5,7 +5,7 @@ class called BAse.
 it uses settera and getters to protect attributes like:
 width and height"""
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -22,7 +22,9 @@ class Rectangle(Base):
 
         Methods
         -------
-        None
+            public methods
+            --------------
+            area(self)
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -98,3 +100,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        '''Returns the area of rectangle '''
+        return (self.__height * self.__width)
