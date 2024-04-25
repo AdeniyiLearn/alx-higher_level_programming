@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """This module defines an class variable called __nb_objects, and will be
 the base class of all the other classes in this project.
 
