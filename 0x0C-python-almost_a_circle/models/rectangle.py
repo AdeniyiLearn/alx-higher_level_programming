@@ -26,7 +26,7 @@ class Rectangle(Base):
             area(self)
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initializes each object
+        """initializes each Rectangle object
 
         args:
             width: rectangle wideness
@@ -64,7 +64,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Returns the private attribute width """
+        """Returns the private attribute width"""
         return (self.__width)
 
     @width.setter
@@ -156,7 +156,27 @@ class Rectangle(Base):
         args:
             *args: multiple non keyword arguments
         """
-        id = args
+        if args and len(args) != 0:
+            for arg in args:
+                if len(args) == 1:
+                    self.id = args[0]
+                elif len(args) == 2:
+                    self.id = args[0]
+                    self.__width = args[1]
+                elif len(args) == 3:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                elif len(args) == 4:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                    self.__x = args[3]
+                else:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                    self.__x = args[3]
 
     def __str__(self):
         """Returns informal info representation of object"""
