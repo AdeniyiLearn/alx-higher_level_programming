@@ -141,8 +141,24 @@ class Rectangle(Base):
 
     def display(self):
         """prints # representation of Rectangle instances"""
+        for f in range(self.__y):
+            print()
         for i in range(self.__height):
+            for g in range(self.__x):
+                print(" ", end='')
             for u in range(self.__width):
                 print("#", end='')
             print()
 
+    def update(self, *args):
+        """Method assigms an argument to each attribut
+
+        args:
+            *args: multiple non keyword arguments
+        """
+        id = args
+
+    def __str__(self):
+        """Returns informal info representation of object"""
+        return ("[Rectangle] ({}) {}/{} - {}/{} "
+                .format(id, self.__x, self.__y, self.__width, self.__height))
