@@ -109,6 +109,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """The method sets the value for x cordinates for Rectangle
+
         args:
             x : integer value not less than zero
         Returns: None
@@ -127,6 +128,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """Method sets the value for y cordinates
+
         args:
             x : integer value
         Returnd: None
