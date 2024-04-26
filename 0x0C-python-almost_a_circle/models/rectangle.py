@@ -150,7 +150,7 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Method assigms an argument to each attribut
 
         args:
