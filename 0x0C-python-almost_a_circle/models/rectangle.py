@@ -177,6 +177,20 @@ class Rectangle(Base):
                     self.__width = args[1]
                     self.__height = args[2]
                     self.__x = args[3]
+                    self.__y = args[4]
+            else:
+                if kwargs and len(kwargs) != 0:
+                    for key, arg in kwargs.items():
+                        if key == 'id':
+                            self.id = arg
+                        elif key == 'height':
+                            self.__height = arg
+                        elif key == 'width':
+                            self.__width = arg
+                        elif key == 'x':
+                            self.__x = arg
+                        elif key == 'y':
+                            self.__y = arg
 
     def __str__(self):
         """Returns informal info representation of object"""
