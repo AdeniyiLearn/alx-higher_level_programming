@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This module defines a class Rectangle which inherits from another
 class called BAse.
 
@@ -26,7 +27,6 @@ class Rectangle(Base):
             --------------
             area(self)
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
 
@@ -37,7 +37,7 @@ class Rectangle(Base):
             y: integer value
             id: public instance integer value from Base
         """
-        super().__init__(id=None)
+        super().__init__(id)
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
@@ -78,8 +78,8 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -97,9 +97,45 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
+
+    @property
+    def x(self):
+        """Returns the private attribute x"""
+        return (self.__x)
+
+    @x.setter
+    def x(self, x):
+        """The method sets the value for x cordinates for Rectangle
+        args:
+            x : integer value not less than zero
+        Returns: None
+        """
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = x
+
+    @property
+    def y(self):
+        """Returns private attribute y"""
+        return (self.__y)
+
+    @y.setter
+    def y(self, y):
+        """Method sets the value for y cordinates
+        args:
+            x : integer value
+        Returnd: None
+        """
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        if y <= 0:
+            raise ValueError("y must be >= 0")
+        self.__y = y
 
     def area(self):
         '''Returns the area of rectangle '''
