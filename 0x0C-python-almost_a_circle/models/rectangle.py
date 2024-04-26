@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 """This module defines a class Rectangle which inherits from another
-class called BAse.
-
-it uses settera and getters to protect attributes like:
-width and height
+class called BAse
 """
 
 from models.base import Base
