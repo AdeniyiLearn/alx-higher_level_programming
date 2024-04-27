@@ -18,6 +18,11 @@ class Square(Rectangle):
             y: y coordinate
             id: identifier
         """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size <= 0:
+            raise ValueError("size must be > 0")
+
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
