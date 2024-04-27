@@ -150,6 +150,12 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
+    def to_dictionary(self):
+        return ({"id": self.id,
+            "width":self.__width,
+            "height":self.__height, "x":self.__x,
+            "y":self.__y})
+
     def update(self, *args, **kwargs):
         """Method assigms an argument to each attribut
 
