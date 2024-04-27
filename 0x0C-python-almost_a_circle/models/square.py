@@ -68,6 +68,10 @@ class Square(Rectangle):
                 elif key == 'y':
                     self.y = arg
 
+    def to_dictionary(self):
+        return ({"id": self.id, "size": self.size,
+                "x": self.x, "y": self.y})
+
     def __str__(self):
         """informal string representation of the object"""
         return ("[{}] ({}) {}/{} - {}".format(
